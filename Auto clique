@@ -1,0 +1,11 @@
+local botao = script.Parent
+local ativo = false
+
+botao.MouseButton1Click:Connect(function()
+    ativo = not ativo
+
+    while ativo do
+        botao:Activate()
+        task.wait(0.1)
+    end
+end)
